@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expense Tracker</title>
+</head>
+<style>
+    body {
+        background-color: azure;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        margin: 30px auto;
+        width: fit-content;
+        display: flex;
+    }
+
+    .box {
+        display: flex;
+    }
+
+    .common {
+        padding-right: 80px;
+    }
+
+    .ie {
+        padding: 10px;
+    }
+
+    .delete {
+        display: none;
+    }
+
+    .expense{
+        background-color: #ea7070;
+    }
+
+    .income{
+        background-color: rgb(117, 238, 155);
+    }
+    .money {
+        display: inline-block;
+        margin: 1px;
+    }
+
+    h3 {
+        border-bottom: 1px solid #bbb;
+        padding-bottom: 10px;
+    }
+</style>
+
+<body>
+    <h2>ExpenseTracker</h2>
+    <div class="container">
+        <div class="Inc_exp_container common">
+            <h4>Your Balance</h4>
+            <h1 id="balance" class="balance">
+                <i>$</i>
+                <p class="money" id="money_balance">0.00</p>
+            </h1>
+            <div class="box container">
+                <div class="ie1 ie">
+                    <h4>INCOME</h4>
+                    <i>$</i><p class="money" id="money_income">0.00</p>
+                </div>
+                <div class="ie2 ie">
+                    <h4>EXPENSE</h4>
+                    <i>$</i><p class="money" id="money_expense">0.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="history common">
+            <h3>HISTORY</h3>
+            <ul id="list">
+                <li id="money">
+                    <span> cash - $400 </span>
+                </li>
+            </ul>
+        </div>
+        <div class="newTransaction common">
+            <h3>Add New Transaction</h3>
+            <div class="form1">
+                <label for="text">Text:</label><br>
+                <input type="text" id="text" placeholder="Enter Text....."><br><br>
+            </div>
+            <div class="form2">
+                <label for="amount">Amount:</label><br>
+                <input type="number" id="amount" placeholder="Enter amount....."><br><br>
+            </div>
+            <button class="btn" type="submit" onclick="addTransaction()">Add transaction</button>
+        </div>
+    </div>
+    <script src="expenseTracker.js"></script>
+</body>
+
+</html>
